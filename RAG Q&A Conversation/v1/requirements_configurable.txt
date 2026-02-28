@@ -1,0 +1,108 @@
+# Core Dependencies - REQUIRED
+streamlit>=1.28.0
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.0.20
+pypdf>=3.17.0
+python-dotenv>=1.0.0
+
+# LLM Providers - Install based on your config.ini choice
+langchain-groq>=0.0.1              # For Groq (default)
+langchain-openai>=0.0.1            # For OpenAI
+langchain-anthropic>=0.0.1         # For Anthropic (Claude)
+# langchain-ollama>=0.0.1          # For Ollama (local) - usually included in langchain-community
+
+# Embedding Providers
+langchain-huggingface>=0.0.1       # For HuggingFace embeddings (default, free)
+sentence-transformers>=2.2.0       # Required for HuggingFace embeddings
+# langchain-cohere>=0.0.1          # For Cohere embeddings (optional)
+
+# Vector Stores
+langchain-chroma>=0.1.0            # For Chroma (default)
+chromadb>=0.4.0                    # Required for Chroma
+# faiss-cpu>=1.7.4                 # For FAISS (optional, CPU version)
+# faiss-gpu>=1.7.4                 # For FAISS (optional, GPU version)
+# langchain-pinecone>=0.0.1        # For Pinecone (optional, cloud)
+# pinecone-client>=3.0.0           # Required for Pinecone
+# langchain-qdrant>=0.0.1          # For Qdrant (optional, cloud/local)
+# qdrant-client>=1.7.0             # Required for Qdrant
+# langchain-weaviate>=0.0.1        # For Weaviate (optional, cloud/local)
+# weaviate-client>=3.25.0          # Required for Weaviate
+
+# Agent Dependencies
+langchain-experimental>=0.0.1      # For advanced agent features
+
+# Optional: Performance & Utilities
+# torch>=2.0.0                     # For faster embeddings (CPU version)
+# numpy>=1.24.0                    # Usually installed with other packages
+# tiktoken>=0.5.0                  # For OpenAI token counting
+
+# ════════════════════════════════════════════════════════════════════════════════
+# INSTALLATION GUIDES
+# ════════════════════════════════════════════════════════════════════════════════
+
+# MINIMAL INSTALL (Groq + HuggingFace + Chroma):
+# pip install streamlit langchain langchain-core langchain-community langchain-groq
+# pip install langchain-huggingface sentence-transformers langchain-chroma chromadb
+# pip install pypdf python-dotenv
+
+# FULL INSTALL (All providers):
+# pip install -r requirements.txt --upgrade
+
+# SPECIFIC PROVIDERS:
+
+# For OpenAI:
+# pip install langchain-openai
+
+# For Anthropic (Claude):
+# pip install langchain-anthropic
+
+# For Cohere embeddings:
+# pip install langchain-cohere
+
+# For FAISS vector store:
+# pip install faiss-cpu  # or faiss-gpu for GPU support
+
+# For Pinecone vector store:
+# pip install pinecone-client langchain-pinecone
+
+# For Qdrant vector store:
+# pip install qdrant-client langchain-qdrant
+
+# For Weaviate vector store:
+# pip install weaviate-client langchain-weaviate
+
+# For Ollama (local LLM):
+# 1. Install Ollama from https://ollama.ai
+# 2. Pull model: ollama pull llama2
+# 3. Run server: ollama serve
+# No pip install needed - uses langchain-community
+
+# ════════════════════════════════════════════════════════════════════════════════
+# RECOMMENDED COMBINATIONS
+# ════════════════════════════════════════════════════════════════════════════════
+
+# BEGINNER (All Free):
+# - LLM: Groq (llama-3.1-8b-instant)
+# - Embeddings: HuggingFace (all-MiniLM-L6-v2)
+# - Vector Store: Chroma
+# Install: pip install streamlit langchain langchain-groq langchain-huggingface langchain-chroma pypdf
+
+# ADVANCED (Best Quality):
+# - LLM: Anthropic (claude-3-5-sonnet)
+# - Embeddings: OpenAI (text-embedding-3-large)
+# - Vector Store: Pinecone
+# Install: pip install streamlit langchain langchain-anthropic langchain-openai langchain-pinecone pypdf
+
+# LOCAL (Complete Privacy):
+# - LLM: Ollama (llama2)
+# - Embeddings: HuggingFace or Ollama
+# - Vector Store: FAISS or Chroma
+# Install: pip install streamlit langchain langchain-huggingface faiss-cpu pypdf
+# Plus: Install Ollama from https://ollama.ai
+
+# PRODUCTION (Balanced):
+# - LLM: Groq (llama-3.1-70b-versatile)
+# - Embeddings: OpenAI (text-embedding-3-small)
+# - Vector Store: Chroma or Pinecone
+# Install: pip install streamlit langchain langchain-groq langchain-openai langchain-chroma pypdf

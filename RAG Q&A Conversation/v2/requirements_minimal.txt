@@ -1,0 +1,58 @@
+# Minimal Requirements - Quick Start
+# This installs only what you need for the default config (Groq + HuggingFace + Chroma)
+
+# Core Dependencies
+streamlit>=1.28.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+pypdf>=3.17.0
+python-dotenv>=1.0.0
+
+# Default LLM Provider (Groq)
+langchain-groq>=0.2.0
+
+# Default Embedding Provider (HuggingFace)
+langchain-huggingface>=0.1.0
+sentence-transformers>=2.2.0
+
+# Default Vector Store (Chroma)
+langchain-chroma>=0.1.0
+chromadb>=0.4.0
+
+# Agent Dependencies (IMPORTANT for agent features)
+langgraph>=0.2.0
+
+# ════════════════════════════════════════════════════════════════════════════════
+# INSTALLATION INSTRUCTIONS
+# ════════════════════════════════════════════════════════════════════════════════
+
+# QUICK START (Groq + HuggingFace + Chroma):
+# pip install -r requirements_minimal.txt
+
+# Then run:
+# streamlit run configurable_rag_app.py
+
+# Get Groq API key from: https://console.groq.com/keys (FREE!)
+
+# ════════════════════════════════════════════════════════════════════════════════
+# OPTIONAL: Add more providers as needed
+# ════════════════════════════════════════════════════════════════════════════════
+
+# For OpenAI:
+# pip install langchain-openai
+
+# For Anthropic (Claude):
+# pip install langchain-anthropic
+
+# For Cohere embeddings:
+# pip install langchain-cohere
+
+# For FAISS vector store:
+# pip install faiss-cpu
+
+# For Ollama (local):
+# 1. Install from https://ollama.ai
+# 2. Run: ollama pull llama2
+# 3. Start: ollama serve
+# (No pip install needed)

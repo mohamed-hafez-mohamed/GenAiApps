@@ -1,0 +1,38 @@
+python -m pip install --upgrade pip
+
+python -m venv LangChain_venv
+(Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)
+.\LangChain_venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install --upgrade pip
+
+python -m streamlit run "RAG Q&A Conversation\simple_rag_app.py"
+python -m streamlit run "autosar_agent_app\app.py"
+
+python -m pip install -U langchain-community
+
+python -m pip show langchain langgraph langchain-core langchain-community langchain-text-splitters
+python -m pip show langchain-community
+
+
+Name: langchain
+Version: 1.2.10
+
+Name: langgraph
+Version: 1.0.8
+
+Name: langchain-community
+Version: 0.4.1
+
+Name: langchain-core
+Version: 1.2.13
+
+Name: langchain-text-splitters
+Version: 1.1.0
+
+python -m pip show langchainhub
+Name: langchainhub
+Version: 0.1.21
+python -m pip install langchainhub --no-cache-dir --force-reinstall
+
+

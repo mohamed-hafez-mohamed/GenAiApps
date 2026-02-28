@@ -1,0 +1,7 @@
+# Minimal requirements for PDF loading
+pypdf>=3.17.0
+requests>=2.31.0
+
+# Optional: If you want to use LangChain later (but with lazy imports to avoid heavy dependencies)
+# langchain-core>=0.1.0
+# langchain-community>=0.0.10
