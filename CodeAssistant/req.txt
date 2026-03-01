@@ -1,0 +1,2 @@
+ollama create CodeAssistant -f ModelFile
+ollama run CodeAssistant
