@@ -1,8 +1,11 @@
 python -m pip install --upgrade pip
 
+py -3.11 -m venv cassio_venv
 python -m venv LangChain_venv
 (Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)
 .\LangChain_venv\Scripts\Activate.ps1
+source LangChain_venv/Scripts/activate
+deactivate
 python -m pip install -r requirements.txt
 python -m pip install --upgrade pip
 
