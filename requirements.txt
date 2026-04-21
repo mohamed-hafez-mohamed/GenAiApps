@@ -45,3 +45,4 @@ datasets
 cassio
 gradio
 neo4j==5.14
+weaviate-client
